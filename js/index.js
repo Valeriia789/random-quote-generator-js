@@ -1,10 +1,12 @@
-import quotes from "../data/quotes.json" assert { type: "json" };
-console.log(quotes);
+// import quotesData from "../data/quotesData.json" assert { type: "json" };
+// console.log(quotesData);
+
+import { quotesData } from "../data/quotesData.js";
 
 //Function to randomly select a quote value and return a random quote object from the quotes array
 function getRandomQuote() {
-  const randomNumber = Math.floor(Math.random() * quotes.length);
-  const randomQuote = quotes[randomNumber];
+  const randomNumber = Math.floor(Math.random() * quotesData.length);
+  const randomQuote = quotesData[randomNumber];
   return randomQuote;
 }
 
@@ -20,9 +22,9 @@ function getRandomColor() {
 //Function to call the getRandomQuote function and stores the returned quote object in a variable
 //Constructs a string containing the different properties of the quote object
 function printQuote() {
-  const quotes = getRandomQuote();
+  const quotesData = getRandomQuote();
   const quoteContainer = document.getElementById("quote-box");
-  let quoteString = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}`;
+  let quoteString = `<p class="quote">${quotesData.quote}</p><p class="source">${quotesData.source}`;
 
   quoteContainer.innerHTML = quoteString;
 
