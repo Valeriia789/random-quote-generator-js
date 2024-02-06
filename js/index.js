@@ -8,11 +8,11 @@ function getRandomQuote() {
   return randomQuote;
 }
 
-//Function to select random rgb color value
+//Function to select random rgb color value (except light colors, rgb not 255)
 function getRandomColor() {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
+  const red = Math.floor(Math.random() * 230);
+  const green = Math.floor(Math.random() * 230);
+  const blue = Math.floor(Math.random() * 230);
   const randomColor = "rgb(" + red + "," + green + "," + blue + ")";
   return randomColor;
 }
