@@ -2,7 +2,8 @@ body {
   height: 100vh;
   background-size: cover;
   color: white;
-  font-family: "Amatic SC", cursive;
+
+  font-family: 'Shantell Sans', cursive;
   background-color: rgb(95, 207, 128);
 }
 
@@ -12,6 +13,7 @@ body {
   flex-direction: column;
 
   padding: 1.5rem;
+  overflow-y: scroll;
 }
 
 .quote {
@@ -55,6 +57,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  .quote-container {
+    padding: 3rem;
+  }
   .quote {
     font-size: 6rem;
   }
