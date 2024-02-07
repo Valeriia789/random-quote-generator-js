@@ -1,82 +1,69 @@
 body {
-  /*text-align: center;*/
+  height: 100vh;
   background-size: cover;
   color: white;
-  font-family: 'Amatic SC', cursive;
-  background-color: rgb(95,207,128);
+  font-family: "Amatic SC", cursive;
+  background-color: rgb(95, 207, 128);
 }
-#quote-box {
-  position: absolute;
-  top: 14%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  line-height: .5;
+
+.quote-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.5rem;
 }
+
 .quote {
-  font-size: 6rem;
-  font-weight: 400;
-  line-height: 1.1;
-  text-shadow: 0 1px 1px rgba(0,0,0, .8);
-  position: relative;
   margin: 0;
-  } 
-.quote:before, .quote:after {
-  font-size: 6rem;
-  line-height: 2.5rem;
-  position: absolute;
+
+  font-size: 3rem;
+  font-weight: 400;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
 }
-.quote:before {
-  content: "“";
-  top: .25em;
-  left: -.5em;
-}
-.quote:after {
-  content: "”";
-  bottom: -.1em;
-  margin-left: .1em;
-  position: absolute;
-}
+
 .source {
-  font-size: 2.5rem;
-  letter-spacing: 0.05em;
-  line-height: 1.1;
+  font-size: 2rem;
   text-align: right;
-  margin-right: 4em;
 }
-.source:before {
-  content: "—";
-}
+
 #loadQuote {
-  font-size: 2.5rem;;
-  position: fixed;
-  width: 7em;
-  display: inline-block;
-  left: 50%;
-  margin-left: -6em;
-  bottom: 150px;
-  border-radius: 4px;
+  width: max-content;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+
+  padding: 15px;
+
   border: 2px solid #fff;
+  border-radius: 4px;
+
   color: #fff;
-  background-color: rgba(255,255,255, 0);
-  padding: 15px 0;
-  transition: .5s ;
+  background-color: rgba(255, 255, 255, 0);
+
+  font-size: 2rem;
+  transition: 0.5s;
 }
+
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255, 255, 255, 0.25);
 }
+
 #loadQuote:focus {
   outline: none;
 }
 
-@media (max-width: 420px) {
+@media (min-width: 768px) {
   .quote {
-    font-size: 2.5rem;
+    font-size: 6rem;
   }
-  .quote:before, .quote:after {
-    font-size: 3rem;
-  }
+
   .source {
-    font-size: 1rem;
+    font-size: 4rem;
+  }
+
+  #loadQuote {
+    font-size: 4rem;
   }
 }

@@ -24,7 +24,7 @@ function getRandomColor() {
 function printQuote() {
   const quotesData = getRandomQuote();
   const quoteContainer = document.getElementById("quote-box");
-  let quoteString = `<p class="quote">${quotesData.quote}</p><p class="source">${quotesData.source}`;
+  let quoteString = `<p class="quote"> "${quotesData.quote}"</p><p class="source"> — ${quotesData.source}`;
 
   quoteContainer.innerHTML = quoteString;
 
