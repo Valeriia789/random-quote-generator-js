@@ -8,12 +8,12 @@ body {
 }
 
 .quote-container {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 
   padding: 1.5rem;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .quote {
